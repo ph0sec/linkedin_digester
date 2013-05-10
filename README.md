@@ -13,9 +13,9 @@ The mails itself will remain and will be marked as read. In addition, the script
 
 linkedin_digester.py
 
-	-u <email username>		- the user name of your mail account
-	-s <mail server>		- the mail server
-	-f [output file] 		- output file, optional
+	-u <email username>			- the user name of your mail account
+	-s <mail server>			- the mail server
+	-f [output file] 			- output file, optional
 	-n [mails to process]		- mails to process, optional.
 	
 	
@@ -29,7 +29,7 @@ linkedin_digester.py
 - [Mechanize](http://wwwsearch.sourceforge.net/mechanize/)
 - [BeautifulSoup](http://www.crummy.com/software/BeautifulSoup/)
 - [lxml](http://lxml.de/)
-- [HTML.py](http://www.decalage.info/python/html) with some customizations
+- [HTML.py](http://www.decalage.info/python/html) with some customizations (supplied)
 
 
 ### Known Issues:
