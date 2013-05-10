@@ -13,15 +13,15 @@ The mails itself will remain and will be marked as read. In addition, the script
 
 linkedin_digester.py
 
-	-u <email username>			- the user name of your mail account
-	-s <mail server>			- the mail server
-	-f [output file] 			- output file, this is optional
-	-n [mails to process]		- how mush mail messages to process, optional too. If not supplied, it will process all the mails.
+	-u <email username>		- the user name of your mail account
+	-s <mail server>		- the mail server
+	-f [output file] 		- output file, optional
+	-n [mails to process]		- mails to process, optional.
 	
 	
 ### Example:
 
-***linkedin_digester.py** **-u** your_name **-s** imap.gmail.com **-f** digests.html **-n** 200*
+**linkedin_digester.py** **-u** your_name **-s** imap.gmail.com **-f** digests.html **-n** 200
 
 
 ### Dependencies:
