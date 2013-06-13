@@ -139,7 +139,7 @@ def main(argv):
     browser.set_handle_robots(False)
     browser.addheaders = [('User-agent', 'Mozilla/5.0 (X11; Linux x86_64; rv:19.0) Gecko/20100101 Firefox/19.0')]
 
-    browser.open('http://www.linkedin.com')
+    browser.open('https://www.linkedin.com/uas/login?goback=&trk=hb_signin')
     browser.select_form(name='login')
     browser['session_key'] = username + '@gmail.com' #TODO chage the default server to the dynamic one
     browser['session_password'] = getpass.getpass('Get LinkedIn password: ')
