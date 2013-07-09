@@ -177,7 +177,7 @@ def main(argv):
                 h4Tag = BeautifulSoup(resp, "lxml", parse_only=linksToArticle)
                 aTag = h4Tag.find('a')
                 spanTag = h4Tag.find('span')
-                if aTag != None and spanTag != None and len(spanTag.contents) > 0  and aTag['data-contentpermalink'] != None and line.strong.string != None and not aTag['data-contentpermalink'] in post_links:
+                if aTag != None and spanTag != None and len(spanTag.contents) > 0  and aTag.attrs['data-contentpermalink'] != None and line.strong.string != None and not aTag['data-contentpermalink'] in post_links:
                     post_links[aTag['data-contentpermalink']] = line.strong.string
                     date = time.strftime("%a, %d %b %Y", time.strptime(get_message_date(raw_msg), '%a, %d %b %Y %H:%M:%S +0000 (%Z)'))
                     article_link = '<a href=' + aTag['data-contentpermalink'] + '>' + line.strong.string + '</a>'
@@ -195,10 +195,11 @@ def main(argv):
     mailcon.logout()
     print "Unique links in the mails: ", len(post_links)
     print "Sum of all links in the mails: ", sum_of_all_links
-    os.remove(output_file + '.bak')
     f = open(output_file, 'w')
     f.write(unicode(table_data).encode('utf-8'))
     f.close()
+    if os.path.isfile(output_file + '.bak'):
+        os.remove(output_file + '.bak')
 
 if __name__ == "__main__":
    main(sys.argv[1:])
